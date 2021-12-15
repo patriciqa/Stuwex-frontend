@@ -1,7 +1,7 @@
 <template>
   <main
     ref="scroll_container"
-    @mousewheel="handleScroll"
+    @mousewheel="scrollX"
     class="flex flex-row scroll-container"
   >
     <div
@@ -87,7 +87,7 @@ export default {
   },
 
   methods: {
-    handleScroll(e) {
+    scrollX(e) {
       this.$refs["scroll_container"].scrollLeft += e.deltaY;
     },
   },

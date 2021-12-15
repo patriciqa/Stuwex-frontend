@@ -1,7 +1,7 @@
 <template>
   <main
     ref="scroll_container"
-    @mousewheel="handleScroll"
+    @mousewheel="scrollX"
     class="flex flex-row scroll-container"
   >
     <div
