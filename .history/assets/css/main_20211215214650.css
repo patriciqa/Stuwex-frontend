@@ -55,6 +55,7 @@ main.flex {
   position: relative;
 }
 
+
 section.image {
   display: flex;
   justify-content: space-between;
@@ -70,6 +71,7 @@ section.image {
 }
 
 .image-bg {
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -167,3 +169,5 @@ section.image {
 .btn {
   margin-top: 1rem;
 }
+
+

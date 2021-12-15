@@ -4,15 +4,17 @@
       v-for="(image, index) in images"
       :key="index"
       :class="[`figure-${index}`]"
+      class=""
+      ref="wholeSection"
     >
       <navigation></navigation>
-      <div class="top-pages" v-if="image.Category.length == 1">
+      <div v-if="image.Category.length == 1">
         <section
           v-if="image.Size === 'large'"
-          class="image text-center text-bottom"
+          class="child image text-center text-bottom"
         >
           <div
-            class="image-bg"
+            class="image-bg child"
             :style="{ backgroundImage: `url(${image.Link})` }"
           >
             <div class="image-aside">
@@ -81,12 +83,14 @@ export default {
       .get("http://bildarchivaarau.azurewebsites.net/api/photo")
       .then((res) => res.data.filter((e) => e.Category.length === 1));
     Vue.nextTick(this.scrollAnimation);
+
   },
+
   methods: {
     scrollAnimation() {
       gsap.registerPlugin(ScrollTrigger);
 
-      let sections = this.$refs.scroll_container.children;
+      let sections = this.$refs.wholeSection;
       console.log(sections);
       gsap.to(sections, {
         xPercent: -100 * (sections.length - 1),

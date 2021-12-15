@@ -53,12 +53,27 @@ main.flex {
   display: flex;
   overflow-x: hidden;
   position: relative;
+  overflow-x: scroll; 
+
+}
+
+.scroll-container {
+  scroll-snap-points-y: repeat(300px);
+
+}
+
+.child {
+  scroll-snap-align: start;
+  
+
 }
 
 section.image {
   display: flex;
   justify-content: space-between;
   min-width: 100vw;
+  scroll-snap-align: start;
+
 }
 
 .image-src {
@@ -70,6 +85,7 @@ section.image {
 }
 
 .image-bg {
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -167,3 +183,5 @@ section.image {
 .btn {
   margin-top: 1rem;
 }
+
+

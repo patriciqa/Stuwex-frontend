@@ -51,8 +51,10 @@ nav a {
 main.flex {
   height: 100vh;
   display: flex;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   position: relative;
+  scroll-snap-type: y mandatory;
+	overflow-x: scroll;
 }
 
 section.image {
@@ -70,6 +72,7 @@ section.image {
 }
 
 .image-bg {
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -166,4 +169,15 @@ section.image {
 
 .btn {
   margin-top: 1rem;
+}
+
+section{
+  scroll-snap-align: start;
+
+}
+
+.scroll-container{
+  scroll-snap-type: y mandatory;
+	overflow-x: scroll;
+
 }

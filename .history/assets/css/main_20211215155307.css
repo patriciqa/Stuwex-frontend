@@ -50,9 +50,29 @@ nav a {
 
 main.flex {
   height: 100vh;
-  display: flex;
-  overflow-x: hidden;
-  position: relative;
+  /* display: flex; */
+  /* overflow-x: hidden; */
+  /* position: relative;
+  overflow-x: scroll; */
+  
+  scroll-snap-type: y mandatory;	
+	display: flex;
+	overflow-x: scroll;
+}
+
+.whole-section {
+  border-right: 1px solid white;
+	padding: 1rem;
+	min-width: 100vw;
+	height: 100vh;
+	scroll-snap-align: start end;
+
+}
+
+.scroll-container{
+  scroll-snap-type: y mandatory;
+	overflow-x: scroll;
+
 }
 
 section.image {
@@ -70,6 +90,7 @@ section.image {
 }
 
 .image-bg {
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -167,3 +188,5 @@ section.image {
 .btn {
   margin-top: 1rem;
 }
+
+

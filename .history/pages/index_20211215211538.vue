@@ -1,18 +1,22 @@
 <template>
-  <div ref="scroll_container" class="flex flex-row scroll-container">
+  <div
+    ref="scroll_container"
+    class="flex flex-row scroll-container"
+  >
     <div
       v-for="(image, index) in images"
       :key="index"
       :class="[`figure-${index}`]"
+      class=""
     >
       <navigation></navigation>
-      <div class="top-pages" v-if="image.Category.length == 1">
+      <div v-if="image.Category.length == 1">
         <section
           v-if="image.Size === 'large'"
-          class="image text-center text-bottom"
+          class="child image text-center text-bottom"
         >
           <div
-            class="image-bg"
+            class="image-bg child"
             :style="{ backgroundImage: `url(${image.Link})` }"
           >
             <div class="image-aside">
@@ -68,7 +72,6 @@
 </template>
 
 <script>
-import Vue from "vue";
 export default {
   data() {
     return {
@@ -80,14 +83,16 @@ export default {
     this.images = await this.$axios
       .get("http://bildarchivaarau.azurewebsites.net/api/photo")
       .then((res) => res.data.filter((e) => e.Category.length === 1));
-    Vue.nextTick(this.scrollAnimation);
+  },
+  mounted() {
+    this.scrollAnimation();
   },
   methods: {
     scrollAnimation() {
       gsap.registerPlugin(ScrollTrigger);
 
-      let sections = this.$refs.scroll_container.children;
-      console.log(sections);
+      let sections = gsap.utils.toArray(".child");
+
       gsap.to(sections, {
         xPercent: -100 * (sections.length - 1),
         ease: "none",
@@ -123,7 +128,7 @@ export default {
 
 <style>
 .scroll-container {
-  overscroll-behavior: none;
+    overscroll-behavior: none;
 
   /* scroll-snap-type: x mandatory; */
 }

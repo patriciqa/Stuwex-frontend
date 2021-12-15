@@ -1,5 +1,5 @@
 <template>
-  <div ref="scroll_container" class="flex flex-row scroll-container">
+  <main ref="scroll_container" class="flex flex-row scroll-container">
     <div
       v-for="(image, index) in images"
       :key="index"
@@ -64,7 +64,7 @@
         </section>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>

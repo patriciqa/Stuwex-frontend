@@ -70,6 +70,7 @@ section.image {
 }
 
 .image-bg {
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -166,4 +167,14 @@ section.image {
 
 .btn {
   margin-top: 1rem;
+}
+
+section{
+  scroll-snap-align: start;
+
+}
+
+.scroll-container{
+  scroll-snap-type: y mandatory;
+
 }
