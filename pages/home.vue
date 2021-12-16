@@ -1,73 +1,73 @@
 <template>
-<div>
-  <navigation></navigation>
-  <div ref="scroll_container" class="flex flex-row scroll-container">
-    <div
-      v-for="(image, index) in images"
-      :key="index"
-      :class="[`figure-${index}`]"
-    >
-      
-      <div v-if="image.Category.length == 1">
-        <section
-          v-if="image.Size === 'large'"
-          class="image text-center text-bottom"
-        >
-          <div
-            class="image-bg"
-            :style="{ backgroundImage: `url(${image.Link})` }"
+  <main>
+    <navigation></navigation>
+    <div ref="scroll_container" class="flex flex-row scroll-container">
+      <div
+        v-for="(image, index) in images"
+        :key="index"
+        :class="[`figure-${index}`]"
+      >
+        
+        <div v-if="image.Category.length == 1">
+          <section
+            v-if="image.Size === 'large'"
+            class="image text-center text-bottom"
           >
+            <div
+              class="image-bg"
+              :style="{ backgroundImage: `url(${image.Link})` }"
+            >
+              <div class="image-aside">
+                <h3 class="image-text">{{ image.Filetext }}</h3>
+                <p class="image-caption">{{ image.Title }}</p>
+                <nuxt-link v-if="image.Haschild" :to="`/${image.Category}`">
+                  <button class="btn">More</button>
+                </nuxt-link>
+              </div>
+              <span class="image-copy">{{ image.Copyright }}</span>
+            </div>
+          </section>
+
+          <section
+            v-if="image.Size === 'medium'"
+            class="image text-right text-top"
+          >
+            <div class="image-container">
+              <div class="image-section">
+                <img :src="image.Link" :alt="image.Name" class="image-src" />
+                <span class="image-copy">{{ image.Copyright }}</span>
+              </div>
+            </div>
             <div class="image-aside">
-              <h3 class="image-text">{{ image.Filetext }}</h3>
+              <h2 class="image-text">
+                {{ image.Filetext }}
+              </h2>
               <p class="image-caption">{{ image.Title }}</p>
               <nuxt-link v-if="image.Haschild" :to="`/${image.Category}`">
                 <button class="btn">More</button>
               </nuxt-link>
             </div>
-            <span class="image-copy">{{ image.Copyright }}</span>
-          </div>
-        </section>
+          </section>
 
-        <section
-          v-if="image.Size === 'medium'"
-          class="image text-right text-top"
-        >
-          <div class="image-container">
-            <div class="image-section">
-              <img :src="image.Link" :alt="image.Name" class="image-src" />
-              <span class="image-copy">{{ image.Copyright }}</span>
+          <section class="image text-left text-top" v-if="image.Size === 'small'">
+            <div class="image-aside">
+              <h2 class="image-text">{{ image.Filetext }}</h2>
+              <p class="image-caption">{{ image.Title }}</p>
+              <nuxt-link v-if="image.Haschild" :to="`/${image.Category}`">
+                <button class="btn">More</button>
+              </nuxt-link>
             </div>
-          </div>
-          <div class="image-aside">
-            <h2 class="image-text">
-              {{ image.Filetext }}
-            </h2>
-            <p class="image-caption">{{ image.Title }}</p>
-            <nuxt-link v-if="image.Haschild" :to="`/${image.Category}`">
-              <button class="btn">More</button>
-            </nuxt-link>
-          </div>
-        </section>
-
-        <section class="image text-left text-top" v-if="image.Size === 'small'">
-          <div class="image-aside">
-            <h2 class="image-text">{{ image.Filetext }}</h2>
-            <p class="image-caption">{{ image.Title }}</p>
-            <nuxt-link v-if="image.Haschild" :to="`/${image.Category}`">
-              <button class="btn">More</button>
-            </nuxt-link>
-          </div>
-          <div class="flex image-container">
-            <div class="image-section">
-              <img :src="image.Link" :alt="image.Name" class="image-src" />
-              <span class="image-copy">{{ image.Copyright }}</span>
+            <div class="flex image-container">
+              <div class="image-section">
+                <img :src="image.Link" :alt="image.Name" class="image-src" />
+                <span class="image-copy">{{ image.Copyright }}</span>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+  </main>
 </template>
 
 <script>
