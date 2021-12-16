@@ -7,7 +7,6 @@
   opacity: 0;
 }
 
-
 :root {
   --black: #000;
   --white: #fff;
@@ -146,6 +145,10 @@ section.image {
   font-weight: 300;
 }
 
+.text-right {
+  text-align: left;
+}
+
 .image-text::before {
   content: "";
   width: 4rem;
@@ -163,18 +166,18 @@ section.image {
   margin-top: 1rem;
 }
 
-.page-text-container{
+.page-text-container {
   width: 60vw;
   margin: 5vh auto;
 }
 
-.page-text-container h2{
+.page-text-container h2 {
   font-family: "IBM Plex Sans";
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.page-text-container strong{
+.page-text-container strong {
   font-family: "IBM Plex Sans";
   font-weight: 600;
 }

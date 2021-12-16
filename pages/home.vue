@@ -1,11 +1,13 @@
 <template>
+<div>
+  <navigation></navigation>
   <div ref="scroll_container" class="flex flex-row scroll-container">
     <div
       v-for="(image, index) in images"
       :key="index"
       :class="[`figure-${index}`]"
     >
-      <navigation></navigation>
+      
       <div v-if="image.Category.length == 1">
         <section
           v-if="image.Size === 'large'"
@@ -65,6 +67,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -97,8 +100,9 @@ export default {
           scrub: 1,
           snap: 1 / (sections.length - 1),
           // base vertical scrolling on how wide the container is so it feels more natural.
-          end: "+=3500",
-        },
+          //end: "+=3500",
+          end: () => "+=" + document.querySelector(".scroll-container").offsetWidth
+        }
       });
     },
   },
