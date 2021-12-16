@@ -12,15 +12,11 @@
   --white: #fff;
   --gray: #333;
   --red: red;
-  --red-dark: #000;
-  --red-light: #fff;
 }
 
 body {
   padding: 0;
   margin: 0;
-  background-color: var(--white);
-  color: var(--black);
   font-size: 16px;
   font-family: "IBM Plex Mono", monospace;
   overscroll-behavior-y: none;
@@ -172,6 +168,10 @@ section.image {
 }
 
 /* Category */
+.subpage {
+  padding: 2rem;
+}
+
 .category {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
