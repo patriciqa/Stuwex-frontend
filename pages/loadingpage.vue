@@ -10,9 +10,9 @@
                             <path d="M130,16.8c62.5,0,113.2,50.6,113.2,113.2S192.5,243.2,130,243.2S16.8,192.5,16.8,130S67.5,16.8,130,16.8z" />
                         </svg>
                     </section>
-                    <section class="welcome-text" id="welcome-text">
-                        <h1>Grosssiedlungen in Pressebildern</h1>
-                        <h2>Hoffnungsträger oder Symbol der Wachstumskritik?</h2>
+                    <section id="welcome-text">
+                        <p class="welcome-text welcome-text-heading">Grosssiedlungen in Pressebildern</p>
+                        <p class="welcome-text welcome-text-subheading">Hoffnungsträger oder Symbol der Wachstumskritik?</p>
                     </section>
                 </div>
             </div>
@@ -63,6 +63,20 @@ export default {
         background-color:var(--black);
         color: var(--white);
     }
+
+    .welcome-text{
+        text-align: center;
+    }
+
+    .welcome-text-heading{
+        font-family: "IBM Plex Sans";
+        font-weight: 600;
+        font-size: 4rem;
+    }
+
+    .welcome-text-subheading{
+        font-size: 1.5rem;
+    }
   
   /* Scrollbar fix */
         template{
@@ -80,11 +94,12 @@ export default {
             flex-direction: column;
             height: 150vh;
             align-items: center;
+            justify-content: center;
         }
 
         .welcome-content{
             position: fixed;
-            margin: 10vh 0;
+            margin: 5vh 0;
             height: 100%;
         }
 
@@ -101,6 +116,7 @@ export default {
             "centerfix"
             "centerfix";
             justify-content: center;
+            margin-bottom: 10vh;
             
         }
         #kreis svg{
@@ -120,12 +136,12 @@ export default {
         .progress-circle path {
             stroke-dasharray: 711;
             stroke-dashoffset: 0;  
-            stroke-width: 4;
+            stroke-width: 2;
         }
 
         .progress-circle-dashed{
-            stroke-dasharray: 4 4;
-            stroke-width: 2;
+            stroke-dasharray: 4 6;
+            stroke-width: 1;
             z-index: -1;
         }
 
