@@ -3,11 +3,14 @@
        <div class="welcome-page" id="welcome-page">
                 <div class="welcome-content">
                     <section id="kreis">
-                        <svg class="progress-circle" width="260" height="260">
+                        <svg class="circle progress-circle" width="260" height="260">
                             <path d="M130,16.8c62.5,0,113.2,50.6,113.2,113.2S192.5,243.2,130,243.2S16.8,192.5,16.8,130S67.5,16.8,130,16.8z" />
                         </svg>
-                        <svg class="progress-circle-dashed" width="260" height="260">
+                        <svg class="circle progress-circle-dashed" width="260" height="260">
                             <path d="M130,16.8c62.5,0,113.2,50.6,113.2,113.2S192.5,243.2,130,243.2S16.8,192.5,16.8,130S67.5,16.8,130,16.8z" />
+                        </svg>
+                        <svg class="building" width="347" height="215" viewBox="0 0 347 215" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M37.1353 210L4 207.287V76.2159L37.1353 61.9727M37.1353 210L322.609 207.287M37.1353 210V143.701M37.1353 61.9727L234.078 82.4897M37.1353 61.9727V117.223M322.609 207.287H343V13.9868L315.472 5M322.609 207.287V146.754M234.078 82.4897V40.7775L315.472 5M234.078 82.4897L315.472 91.6195M315.472 5V91.6195M315.472 91.6195L322.609 92.1547V110.637M37.1353 117.223L322.609 127.593M37.1353 117.223V143.701M322.609 127.593V146.754M322.609 127.593V119.793V110.637M37.1353 91.1373L322.609 110.637M37.1353 143.701L322.609 146.754"/>
                         </svg>
                     </section>
                     <section id="welcome-text">
@@ -79,70 +82,79 @@ export default {
     }
   
   /* Scrollbar fix */
-        template{
-            -ms-overflow-style: none; /* for Internet Explorer, Edge */
-            scrollbar-width: none; /* for Firefox */
-            overflow-y: scroll; 
-        }
+    template{
+         -ms-overflow-style: none; /* for Internet Explorer, Edge */
+        scrollbar-width: none; /* for Firefox */
+        overflow-y: scroll; 
+    }
 
-        template::-webkit-scrollbar {
-           display: none; /* for Chrome, Safari, and Opera */
-        }
+    template::-webkit-scrollbar {
+        display: none; /* for Chrome, Safari, and Opera */
+    }
  
- .welcome-page{
-            display: flex;
-            flex-direction: column;
-            height: 150vh;
-            align-items: center;
-            justify-content: center;
-        }
+    .welcome-page{
+        display: flex;
+        flex-direction: column;
+        height: 150vh;
+        align-items: center;
+        justify-content: center;
+    }
 
-        .welcome-content{
-            position: fixed;
-            margin: 5vh 0;
-            height: 100%;
-        }
+    .welcome-content{
+        position: fixed;
+        margin: 5vh 0;
+        height: 100%;
+    }
 
-        svg{
-            /* transform-origin: 50 50; */
-            transform: scale(2.5); 
-        }
+    .circle{
+        /* transform-origin: 50 50; */
+        transform: scale(2.5); 
+    }
 
-        #kreis{
-            display: grid;
-            grid-template-rows: 1fr;
-            grid-template-columns: 1fr;
-            grid-template-areas:
+    .building{
+        stroke-width: 1;
+    }
+
+    .building path {
+        stroke-width: 3;
+        stroke: var(--red);
+    }
+
+    #kreis{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
             "centerfix"
             "centerfix";
-            justify-content: center;
-            margin-bottom: 10vh;
+        justify-content: center;
+        margin-bottom: 10vh;
             
-        }
-        #kreis svg{
-            grid-area: centerfix;
-            margin: 0 auto;
+    }
+    #kreis svg{
+        grid-area: centerfix;
+        margin: 0 auto;
             
-        }
+    }
 
-        path{
-            stroke: #fff;
-            fill: none;
-            margin: 0 auto;
-            justify-content: center;
-            position: sticky;
-        }
+    .circle path{
+        stroke: #fff;
+        fill: none;
+        margin: 0 auto;
+        justify-content: center;
+        position: sticky;
+    }
 
-        .progress-circle path {
-            stroke-dasharray: 711;
-            stroke-dashoffset: 0;  
-            stroke-width: 2;
-        }
+    .progress-circle path {
+        stroke-dasharray: 711;
+        stroke-dashoffset: 0;  
+        stroke-width: 1;
+    }
 
-        .progress-circle-dashed{
-            stroke-dasharray: 4 6;
-            stroke-width: 1;
-            z-index: -1;
-        }
+    .progress-circle-dashed{
+        stroke-dasharray: 4 6;
+        stroke-width: 1;
+        z-index: -1;
+    }
 
 </style>>
