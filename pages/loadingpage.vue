@@ -50,9 +50,9 @@ export default {
                     percent =self.progress;
                     doAnim()
                 },
-                markers: true,
-                start: "top 0%",
-                end: "bottom 100%"
+                // markers: true,
+                start: "top 0.1%",
+                end: "bottom 100%",
             }
         })
     }
@@ -81,16 +81,6 @@ export default {
         font-size: 1.5rem;
     }
   
-  /* Scrollbar fix */
-    template{
-         -ms-overflow-style: none; /* for Internet Explorer, Edge */
-        scrollbar-width: none; /* for Firefox */
-        overflow-y: scroll; 
-    }
-
-    template::-webkit-scrollbar {
-        display: none; /* for Chrome, Safari, and Opera */
-    }
  
     .welcome-page{
         display: flex;
@@ -102,12 +92,11 @@ export default {
 
     .welcome-content{
         position: fixed;
-        margin: 5vh 0;
         height: 100%;
+        padding-top: 5vh;
     }
 
     .circle{
-        /* transform-origin: 50 50; */
         transform: scale(2.5); 
     }
 
@@ -155,6 +144,17 @@ export default {
         stroke-dasharray: 4 6;
         stroke-width: 1;
         z-index: -1;
+    }
+
+     /* Scrollbar fix */
+    template{
+         -ms-overflow-style: none; /* for Internet Explorer, Edge */
+        scrollbar-width: none; /* for Firefox */
+        overflow-y: scroll; 
+    }
+
+    template::-webkit-scrollbar {
+        display: none; /* for Chrome, Safari, and Opera */
     }
 
 </style>>
