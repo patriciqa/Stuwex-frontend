@@ -162,3 +162,19 @@ section.image {
 .btn {
   margin-top: 1rem;
 }
+
+.page-text-container{
+  width: 60vw;
+  margin: 5vh auto;
+}
+
+.page-text-container h2{
+  font-family: "IBM Plex Sans";
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.page-text-container strong{
+  font-family: "IBM Plex Sans";
+  font-weight: 600;
+}

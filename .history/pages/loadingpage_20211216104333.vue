@@ -52,7 +52,7 @@ export default {
                 },
                 // markers: true,
                 start: "top 0.1%",
-                end: "bottom 100%",
+                end: "bottom 100%"
             }
         })
     }
