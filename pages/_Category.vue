@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="subpage">
     <div class="category">
       <figure
         v-for="(image, index) in images"
@@ -19,7 +19,8 @@
             />
           </section>
           <figcaption>
-            ajfdalkkjsdklfajslkdj
+            <p>{{image.Title}}</p>
+            <span>{{image.Copyright}}</span>
           </figcaption>
         <!-- <figCaption :id="[`image-title-${image.PhotoId}`]" class="caption">
             {{ index }}{{ image.PhotoId }}</figCaption
@@ -30,7 +31,7 @@
         </div>
       </figure>
     </div>
-    <button class="border" @click="handleBack">Go back</button>
+    <button class="back-btn" @click="handleBack"><span class="arrow-up"><img class="arrow-up-img" src="../assets/img/pfeil_w.svg"></span>Zurück zur Startseite</button>
   </main>
 </template>
 
@@ -53,14 +54,3 @@ export default {
   },
 };
 </script>
-
-<style>
-body {
-  background-color: var(--black);
-  color: var(--white);
-}
-
-main {
-  padding: 2rem;
-}
-</style>

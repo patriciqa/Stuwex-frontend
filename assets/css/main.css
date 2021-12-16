@@ -175,12 +175,41 @@ section.image {
 .category {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
 }
 
-.category :nth-child(1) {
+figure:nth-child(1) {
   grid-column: 2 / span 2;
+}
+
+.category figcaption {
+  margin-top: 1rem;
+}
+
+.category figcaption p {
+  font-family: "IBM Plex Sans";
+}
+
+.category figcaption span {
+  opacity: 0.8;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.back-btn {
+  display: flex;
+  width: fit-content;
+  will-change: transform;
+}
+
+.back-btn span.arrow-up {
+  display: inline-block;
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.back-btn:hover span.arrow-up {
+  transform: translateY(-0.5rem);
 }
 
 /* Impressum und Datenschutz */

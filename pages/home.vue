@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="home">
     <navigation></navigation>
     <div ref="scroll_container" class="flex flex-row scroll-container">
       <div
@@ -107,7 +107,3 @@ export default {
   },
 };
 </script>
-
-<style>
-
-</style>
