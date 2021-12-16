@@ -42,7 +42,7 @@ export default {
   },
   async created() {
     this.images = await this.$axios
-      .get("https://bildarchivaarau.azurewebsites.net/api/photo")
+      .get("http://bildarchivaarau.azurewebsites.net/api/photo")
       .then((res) => res.data.filter((e) => e.Category.length === 2));
   },
   methods: {
