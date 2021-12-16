@@ -1,12 +1,17 @@
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 0.5s;
+.fade-enter-active {
+  transition: transform 3s;
 }
-.page-enter,
-.page-leave-active {
-  opacity: 0;
+.fade-leave-active {
+  transition: transform 0.5s;
+  opacity: 0.5;
+  transform: translateY(-300px);
 }
-
+.fade-enter {
+  transition: transform 3s;
+}
+.fade-leave-to {
+  transform: translate3d(-500px, -300px 400px);
+}
 
 :root {
   --black: #000;

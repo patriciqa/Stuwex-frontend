@@ -55,7 +55,7 @@ export default {
     var percent = 0;
 
     function changeToHome() {
-      if (percent > 0.98) {
+      if (percent > 0.95) {
         window.location.replace('/home');
       }
     }

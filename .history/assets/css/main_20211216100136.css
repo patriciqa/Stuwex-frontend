@@ -3,9 +3,20 @@
   transition: opacity 0.5s;
 }
 .page-enter,
-.page-leave-active {
+.page-leave-to {
+  transition: opacity 0.5s;
   opacity: 0;
 }
+
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.5s;
+}
+.layout-enter,
+.layout-leave-to {
+  opacity: 0;
+}
+
 
 
 :root {

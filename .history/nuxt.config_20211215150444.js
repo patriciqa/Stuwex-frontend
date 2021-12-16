@@ -27,10 +27,10 @@ export default {
   css: [
     '~/assets/css/main.css'
   ],
-//   pageTransition: {
-//     name: "fade",
-//     mode: "out-in"
-// },
+  pageTransition: {
+    name: "fade",
+    mode: "out-in"
+},
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [

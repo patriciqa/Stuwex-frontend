@@ -48,16 +48,17 @@ export default {
 
     var path = document.getElementsByTagName("path");
     var pathLength = path[0].getTotalLength();
-    // console.log(pathLength);
+    console.log(pathLength);
 
     var currentPathLength = pathLength;
     var step = 2;
     var percent = 0;
 
     function changeToHome() {
-      if (percent > 0.98) {
-        window.location.replace('/home');
-      }
+        console.log(percent)
+    //   if (percent > 0.95) {
+    //     console.log("yuhu");
+    //   }
     }
 
     function doAnim() {
@@ -70,7 +71,7 @@ export default {
         onUpdate: (self) => {
           // console.log(self.progress)
           percent = self.progress;
-          console.log(percent);
+        //   console.log(percent);
           changeToHome();
           doAnim();
         },

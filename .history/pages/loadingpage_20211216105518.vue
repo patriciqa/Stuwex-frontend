@@ -48,27 +48,22 @@ export default {
 
     var path = document.getElementsByTagName("path");
     var pathLength = path[0].getTotalLength();
-    // console.log(pathLength);
+    console.log(pathLength);
 
     var currentPathLength = pathLength;
     var step = 2;
     var percent = 0;
 
-    function changeToHome() {
-      if (percent > 0.98) {
-        window.location.replace('/home');
-      }
-    }
-
     function doAnim() {
       path[0].style.strokeDashoffset = pathLength * (1 - percent);
     }
 
+
     gsap.to("#kreis", {
-      scrollTrigger: {
-        trigger: "#welcome-page",
+        scrollTrigger: {
+            trigger: "#welcome-page",
         onUpdate: (self) => {
-          // console.log(self.progress)
+            // console.log(self.progress)
           percent = self.progress;
           console.log(percent);
           changeToHome();
@@ -79,7 +74,13 @@ export default {
         end: "bottom 100%",
       },
     });
+      function changeToHome() {
+        if (percent > 0.95) {
+          console.log("yuhu");
+        }
+      }
   },
+
 };
 </script>
 

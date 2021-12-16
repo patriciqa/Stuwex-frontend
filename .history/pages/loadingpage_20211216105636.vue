@@ -48,18 +48,16 @@ export default {
 
     var path = document.getElementsByTagName("path");
     var pathLength = path[0].getTotalLength();
-    // console.log(pathLength);
+    console.log(pathLength);
 
     var currentPathLength = pathLength;
     var step = 2;
     var percent = 0;
-
     function changeToHome() {
-      if (percent > 0.98) {
-        window.location.replace('/home');
+      if (percent > 0.95) {
+        console.log("yuhu");
       }
     }
-
     function doAnim() {
       path[0].style.strokeDashoffset = pathLength * (1 - percent);
     }

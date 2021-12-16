@@ -24,7 +24,7 @@
         <li>
           <NuxtLink
             class="rounded bg-white-200 hover:bg-gray-800 py-2 px-4 block"
-            to="/home"
+            to="/"
             >Home</NuxtLink
           >
         </li>
