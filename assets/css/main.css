@@ -68,7 +68,7 @@ section.image {
 }
 
 .black-font {
-  background-color:black;
+  background-color: black;
   opacity: 0.6;
 }
 
@@ -176,6 +176,13 @@ section.image {
 .link:hover span.arrow-down {
   transform: translateY(0.5rem);
 }
+
+/* img.medium::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: url(../img/pen-frame-quadratisch.png);
+} */
 
 /* Category */
 .subpage {

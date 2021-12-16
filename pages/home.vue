@@ -45,7 +45,7 @@
           >
             <div class="image-container">
               <div class="image-section">
-                <img :src="image.Link" :alt="image.Name" class="image-src" />
+                <img :src="image.Link" :alt="image.Name" class="image-src" :class="image.Size" />
                 <span class="image-copy">{{ image.Copyright }}</span>
               </div>
             </div>
@@ -90,7 +90,7 @@
             </div>
             <div class="flex image-container">
               <div class="image-section">
-                <img :src="image.Link" :alt="image.Name" class="image-src" />
+                <img :src="image.Link" :alt="image.Name" class="image-src"/>
                 <span class="image-copy">{{ image.Copyright }}</span>
               </div>
             </div>
