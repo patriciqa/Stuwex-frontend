@@ -31,7 +31,7 @@
         </div>
       </figure>
     </div>
-    <button class="back-btn" @click="handleBack"><span class="arrow-up"><img class="arrow-up-img" src="../assets/img/pfeil_w.svg"></span>Zurück zur Startseite</button>
+    <button class="back-btn hover:bg-red" @click="handleBack"><span class="arrow-up"><img class="arrow-up-img" src="../assets/img/pfeil_w.svg"></span>Zurück zur Startseite</button>
   </main>
 </template>
 

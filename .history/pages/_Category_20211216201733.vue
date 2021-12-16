@@ -45,7 +45,7 @@ export default {
   async created() {
     this.images = await this.$axios
       .get("https://bildarchivaarau.azurewebsites.net/api/photo")
-      .then((res) => res.data.filter((e) => e.Category.length === 2 && e.Category.endsWith(this.$route.params.Category)));
+      .then((res) => res.data.filter((e) => e.Category.endsWith($route.params.Category))).then();
   },
   methods: {
     handleBack() {
