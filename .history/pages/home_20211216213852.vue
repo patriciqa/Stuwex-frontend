@@ -68,7 +68,7 @@
             </div>
           </section> 
 
-          <section
+          <!-- <section
             class="image text-left text-top"
             :class="index % 2 == 0 ? 'reverse' : ''"
             v-if="image.Size === 'small'"
@@ -94,7 +94,7 @@
                 <span class="image-copy">{{ image.Copyright }}</span>
               </div>
             </div>
-          </section> 
+          </section>  -->
         </div>
       </div>
     </div>

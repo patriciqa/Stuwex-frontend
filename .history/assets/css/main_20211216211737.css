@@ -67,6 +67,10 @@ section.image {
   background-color: var(--red);
 }
 
+/* .no-bg-filter {
+opacity: 0.3;
+} */
+
 .black-font {
   background-color:black;
   opacity: 0.6;

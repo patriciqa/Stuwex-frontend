@@ -62,14 +62,8 @@ section.image {
   background-blend-mode: multiply;
   position: relative;
 }
-
 .red-bg {
   background-color: var(--red);
-}
-
-.black-font {
-  background-color:black;
-  opacity: 0.6;
 }
 
 .reverse {
@@ -132,6 +126,7 @@ section.image {
 .image-text {
   font-family: "IBM Plex Mono";
   font-weight: 300;
+  /* font-size: 1.5rem; */
   font-size: clamp(0.5rem, 10vw, 1.5rem);
   line-height: 140%;
   position: relative;
@@ -140,6 +135,7 @@ section.image {
 
 .text-center .image-text {
   line-height: 110%;
+  /* font-size: 3rem; */
   font-size: clamp(1rem, 10vw, 3rem);
   font-weight: 300;
 }

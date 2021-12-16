@@ -15,10 +15,10 @@
             <div
               class="image-bg"
               :style="{ backgroundImage: `url(${image.Link})` }"
-              :class="index % 2 == 0 ? 'red-bg' : ''"
+              :class="index % 2 == 0 ? 'red-bg' : 'no-bg-filter'"
             >
               <div class="image-aside">
-                <h3 class="image-text" :class="index % 2 == 0 ? '' : 'black-font'">
+                <h3 class="image-text" :class="index % 2 == 0 ? 'red-bg' : ''">
                   {{ image.Filetext }}
                 </h3>
                 <p class="image-caption">{{ image.Title }}</p>
@@ -38,9 +38,9 @@
             </div>
           </section>
 
-           <section
+          <!-- <section
             v-if="image.Size === 'medium'"
-            class="image text-right text-top"
+            class="image text-right text-top reverse"
             :class="index % 2 == 0 ? 'reverse' : ''"
           >
             <div class="image-container">
@@ -66,9 +66,9 @@
                 >Mehr ansehen
               </nuxt-link>
             </div>
-          </section> 
+          </section> -->
 
-          <section
+          <!-- <section
             class="image text-left text-top"
             :class="index % 2 == 0 ? 'reverse' : ''"
             v-if="image.Size === 'small'"
@@ -94,7 +94,7 @@
                 <span class="image-copy">{{ image.Copyright }}</span>
               </div>
             </div>
-          </section> 
+          </section> -->
         </div>
       </div>
     </div>
@@ -140,3 +140,6 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+</style>

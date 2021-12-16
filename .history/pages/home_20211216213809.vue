@@ -8,7 +8,7 @@
         :class="[`figure-${index}`]"
       >
         <div v-if="image.Category.length == 1">
-          <section
+          <!-- <section
             v-if="image.Size === 'large'"
             class="image text-center text-bottom"
           >
@@ -36,12 +36,12 @@
               </div>
               <span class="image-copy">{{ image.Copyright }}</span>
             </div>
-          </section>
+          </section> -->
 
            <section
             v-if="image.Size === 'medium'"
             class="image text-right text-top"
-            :class="index % 2 == 0 ? 'reverse' : ''"
+            :class="index % 2 == 0 ? '' : ''"
           >
             <div class="image-container">
               <div class="image-section">
@@ -68,7 +68,7 @@
             </div>
           </section> 
 
-          <section
+          <!-- <section
             class="image text-left text-top"
             :class="index % 2 == 0 ? 'reverse' : ''"
             v-if="image.Size === 'small'"
@@ -94,7 +94,7 @@
                 <span class="image-copy">{{ image.Copyright }}</span>
               </div>
             </div>
-          </section> 
+          </section>  -->
         </div>
       </div>
     </div>

@@ -15,33 +15,21 @@
             <div
               class="image-bg"
               :style="{ backgroundImage: `url(${image.Link})` }"
-              :class="index % 2 == 0 ? 'red-bg' : ''"
             >
               <div class="image-aside">
-                <h3 class="image-text" :class="index % 2 == 0 ? '' : 'black-font'">
-                  {{ image.Filetext }}
-                </h3>
+                <h3 class="image-text">{{ image.Filetext }}</h3>
                 <p class="image-caption">{{ image.Title }}</p>
-                <nuxt-link
-                  class="link"
-                  v-if="image.Haschild"
-                  :to="`/${image.Category}`"
-                >
-                  <span class="arrow-down"
-                    ><img
-                      class="arrow-down-img"
-                      src="../assets/img/pfeil.svg" /></span
-                  >Mehr ansehen
+                <nuxt-link class="link" v-if="image.Haschild" :to="`/${image.Category}`">
+                  <span class="arrow-down"><img class="arrow-down-img" src="../assets/img/pfeil.svg"></span>Mehr ansehen
                 </nuxt-link>
               </div>
               <span class="image-copy">{{ image.Copyright }}</span>
             </div>
           </section>
 
-           <section
+          <section
             v-if="image.Size === 'medium'"
             class="image text-right text-top"
-            :class="index % 2 == 0 ? 'reverse' : ''"
           >
             <div class="image-container">
               <div class="image-section">
@@ -54,38 +42,18 @@
                 {{ image.Filetext }}
               </h2>
               <p class="image-caption">{{ image.Title }}</p>
-              <nuxt-link
-                class="link"
-                v-if="image.Haschild"
-                :to="`/${image.Category}`"
-              >
-                <span class="arrow-down"
-                  ><img
-                    class="arrow-down-img"
-                    src="../assets/img/pfeil.svg" /></span
-                >Mehr ansehen
+              <nuxt-link class="link" v-if="image.Haschild" :to="`/${image.Category}`">
+                <span class="arrow-down"><img class="arrow-down-img" src="../assets/img/pfeil.svg"></span>Mehr ansehen
               </nuxt-link>
             </div>
-          </section> 
+          </section>
 
-          <section
-            class="image text-left text-top"
-            :class="index % 2 == 0 ? 'reverse' : ''"
-            v-if="image.Size === 'small'"
-          >
+          <section class="image text-left text-top" v-if="image.Size === 'small'">
             <div class="image-aside">
               <h2 class="image-text">{{ image.Filetext }}</h2>
               <p class="image-caption">{{ image.Title }}</p>
-              <nuxt-link
-                class="link"
-                v-if="image.Haschild"
-                :to="`/${image.Category}`"
-              >
-                <span class="arrow-down"
-                  ><img
-                    class="arrow-down-img"
-                    src="../assets/img/pfeil.svg" /></span
-                >Mehr ansehen
+              <nuxt-link class="link" v-if="image.Haschild" :to="`/${image.Category}`">
+                <span class="arrow-down"><img class="arrow-down-img" src="../assets/img/pfeil.svg"></span>Mehr ansehen
               </nuxt-link>
             </div>
             <div class="flex image-container">
@@ -94,7 +62,7 @@
                 <span class="image-copy">{{ image.Copyright }}</span>
               </div>
             </div>
-          </section> 
+          </section>
         </div>
       </div>
     </div>
@@ -114,7 +82,7 @@ export default {
     this.images = await this.$axios
       .get("https://bildarchivaarau.azurewebsites.net/api/photo")
       .then((res) => res.data.filter((e) => e.Category.length === 1));
-    Vue.nextTick(this.scrollAnimation);
+      Vue.nextTick(this.scrollAnimation);
   },
   methods: {
     scrollAnimation() {
@@ -132,9 +100,8 @@ export default {
           snap: 1 / (sections.length - 1),
           // base vertical scrolling on how wide the container is so it feels more natural.
           //end: "+=3500",
-          end: () =>
-            "+=" + document.querySelector(".scroll-container").offsetWidth,
-        },
+          end: () => "+=" + document.querySelector(".scroll-container").offsetWidth
+        }
       });
     },
   },

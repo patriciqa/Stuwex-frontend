@@ -67,10 +67,13 @@ section.image {
   background-color: var(--red);
 }
 
-.black-font {
-  background-color:black;
-  opacity: 0.6;
+/* .no-bg-filter {
+opacity: 0.3;
 }
+
+.black-font {
+  color:black
+} */
 
 .reverse {
   flex-direction: row-reverse;

@@ -18,7 +18,7 @@
               :class="index % 2 == 0 ? 'red-bg' : ''"
             >
               <div class="image-aside">
-                <h3 class="image-text" :class="index % 2 == 0 ? '' : 'black-font'">
+                <h3 class="image-text" :class="image.PhotoId % 2 == 0 ? '' : 'black-font'">
                   {{ image.Filetext }}
                 </h3>
                 <p class="image-caption">{{ image.Title }}</p>
@@ -40,7 +40,7 @@
 
            <section
             v-if="image.Size === 'medium'"
-            class="image text-right text-top"
+            class="image text-right text-top reverse"
             :class="index % 2 == 0 ? 'reverse' : ''"
           >
             <div class="image-container">
@@ -140,3 +140,6 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+</style>

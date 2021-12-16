@@ -15,33 +15,22 @@
             <div
               class="image-bg"
               :style="{ backgroundImage: `url(${image.Link})` }"
-              :class="index % 2 == 0 ? 'red-bg' : ''"
             >
               <div class="image-aside">
-                <h3 class="image-text" :class="index % 2 == 0 ? '' : 'black-font'">
-                  {{ image.Filetext }}
-                </h3>
+                <h3 class="image-text">{{ image.Filetext }}</h3>
                 <p class="image-caption">{{ image.Title }}</p>
-                <nuxt-link
-                  class="link"
-                  v-if="image.Haschild"
-                  :to="`/${image.Category}`"
-                >
-                  <span class="arrow-down"
-                    ><img
-                      class="arrow-down-img"
-                      src="../assets/img/pfeil.svg" /></span
-                  >Mehr ansehen
+                <nuxt-link class="link" v-if="image.Haschild" :to="`/${image.Category}`">
+                  <span class="arrow-down"><img class="arrow-down-img" src="../assets/img/pfeil.svg"></span>Mehr ansehen
                 </nuxt-link>
               </div>
               <span class="image-copy">{{ image.Copyright }}</span>
             </div>
           </section>
 
-           <section
+          <section
             v-if="image.Size === 'medium'"
-            class="image text-right text-top"
-            :class="index % 2 == 0 ? 'reverse' : ''"
+            class="image text-right text-top reverse"
+            :class="index % 2 ? 'reverse' : ''"
           >
             <div class="image-container">
               <div class="image-section">
@@ -66,26 +55,14 @@
                 >Mehr ansehen
               </nuxt-link>
             </div>
-          </section> 
+          </section>
 
-          <section
-            class="image text-left text-top"
-            :class="index % 2 == 0 ? 'reverse' : ''"
-            v-if="image.Size === 'small'"
-          >
+          <!-- <section class="image text-left text-top" v-if="image.Size === 'small'">
             <div class="image-aside">
               <h2 class="image-text">{{ image.Filetext }}</h2>
               <p class="image-caption">{{ image.Title }}</p>
-              <nuxt-link
-                class="link"
-                v-if="image.Haschild"
-                :to="`/${image.Category}`"
-              >
-                <span class="arrow-down"
-                  ><img
-                    class="arrow-down-img"
-                    src="../assets/img/pfeil.svg" /></span
-                >Mehr ansehen
+              <nuxt-link class="link" v-if="image.Haschild" :to="`/${image.Category}`">
+                <span class="arrow-down"><img class="arrow-down-img" src="../assets/img/pfeil.svg"></span>Mehr ansehen
               </nuxt-link>
             </div>
             <div class="flex image-container">
@@ -94,7 +71,7 @@
                 <span class="image-copy">{{ image.Copyright }}</span>
               </div>
             </div>
-          </section> 
+          </section> -->
         </div>
       </div>
     </div>
@@ -140,3 +117,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.reverse {
+  flex-direction: row-reverse;
+}
+</style>

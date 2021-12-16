@@ -40,8 +40,8 @@
 
            <section
             v-if="image.Size === 'medium'"
-            class="image text-right text-top"
-            :class="index % 2 == 0 ? 'reverse' : ''"
+            class="image text-right text-top reverse"
+            :class="image.PhotoId % 2 == 0 ? 'reverse' : ''"
           >
             <div class="image-container">
               <div class="image-section">
@@ -140,3 +140,6 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+</style>
