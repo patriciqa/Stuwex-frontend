@@ -42,13 +42,6 @@ nav a {
   color: var(--white);
 }
 
-main.flex {
-  height: 100vh;
-  display: flex;
-  overflow-x: hidden;
-  position: relative;
-}
-
 section.image {
   display: flex;
   justify-content: space-between;
@@ -162,9 +155,35 @@ section.image {
   content: none;
 }
 
-.btn {
-  margin-top: 1rem;
+.link {
+  margin-top: 2rem;
+  display: flex;
+  width: fit-content;
+  will-change: transform;
 }
+
+.link span.arrow-down {
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.link:hover span.arrow-down {
+  transform: translateY(0.5rem);
+}
+
+/* Category */
+.category {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.category :nth-child(1) {
+  grid-column: 2 / span 2;
+}
+
+/* Impressum und Datenschutz */
 
 .page-text-container {
   width: 60vw;

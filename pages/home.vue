@@ -7,7 +7,6 @@
         :key="index"
         :class="[`figure-${index}`]"
       >
-        
         <div v-if="image.Category.length == 1">
           <section
             v-if="image.Size === 'large'"
@@ -20,8 +19,8 @@
               <div class="image-aside">
                 <h3 class="image-text">{{ image.Filetext }}</h3>
                 <p class="image-caption">{{ image.Title }}</p>
-                <nuxt-link v-if="image.Haschild" :to="`/${image.Category}`">
-                  <button class="btn">More</button>
+                <nuxt-link class="link" v-if="image.Haschild" :to="`/${image.Category}`">
+                  <span class="arrow-down"><img class="arrow-down-img" src="../assets/img/pfeil.svg"></span>Mehr ansehen
                 </nuxt-link>
               </div>
               <span class="image-copy">{{ image.Copyright }}</span>
@@ -43,8 +42,8 @@
                 {{ image.Filetext }}
               </h2>
               <p class="image-caption">{{ image.Title }}</p>
-              <nuxt-link v-if="image.Haschild" :to="`/${image.Category}`">
-                <button class="btn">More</button>
+              <nuxt-link class="link" v-if="image.Haschild" :to="`/${image.Category}`">
+                <span class="arrow-down"><img class="arrow-down-img" src="../assets/img/pfeil.svg"></span>Mehr ansehen
               </nuxt-link>
             </div>
           </section>
@@ -53,8 +52,8 @@
             <div class="image-aside">
               <h2 class="image-text">{{ image.Filetext }}</h2>
               <p class="image-caption">{{ image.Title }}</p>
-              <nuxt-link v-if="image.Haschild" :to="`/${image.Category}`">
-                <button class="btn">More</button>
+              <nuxt-link class="link" v-if="image.Haschild" :to="`/${image.Category}`">
+                <span class="arrow-down"><img class="arrow-down-img" src="../assets/img/pfeil.svg"></span>Mehr ansehen
               </nuxt-link>
             </div>
             <div class="flex image-container">
@@ -83,7 +82,7 @@ export default {
     this.images = await this.$axios
       .get("https://bildarchivaarau.azurewebsites.net/api/photo")
       .then((res) => res.data.filter((e) => e.Category.length === 1));
-    Vue.nextTick(this.scrollAnimation);
+      Vue.nextTick(this.scrollAnimation);
   },
   methods: {
     scrollAnimation() {

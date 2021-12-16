@@ -1,36 +1,37 @@
 <template>
-  <div class="category">
-    <figure
-      v-for="(image, index) in images"
-      :key="index"
-      :class="[`figure-${index}`]"
-    >
-      <div
-        class="top-pages"
-        v-if="image.Category.endsWith($route.params.Category)"
+  <main>
+    <div class="category">
+      <figure
+        v-for="(image, index) in images"
+        :key="index"
+        :class="[`figure-${index}`]"
       >
-        <section>
-          <img
-            :src="image.Link"
-            :alt="image.Name"
-            :id="[`image-${image.PhotoId}`]"
-            :class="[`category--${image.Category}`]"
-          />
-        </section>
-        <figCaption :id="[`image-title-${image.PhotoId}`]" class="caption">
-          {{ index }}{{ image.PhotoId }}</figCaption
+        <div
+          class="top-pages"
+          v-if="image.Category.endsWith($route.params.Category)"
         >
-        <div :id="[`description-${image.PhotoId}`]" class="description">
-          {{ image.Description }}
+          <section>
+            <img
+              :src="image.Link"
+              :alt="image.Name"
+              :id="[`image-${image.PhotoId}`]"
+              :class="[`category--${image.Category}`, image.Size]"
+            />
+          </section>
+          <figcaption>
+            ajfdalkkjsdklfajslkdj
+          </figcaption>
+        <!-- <figCaption :id="[`image-title-${image.PhotoId}`]" class="caption">
+            {{ index }}{{ image.PhotoId }}</figCaption
+          >
+          <div :id="[`description-${image.PhotoId}`]" class="description">
+            {{ image.Description }}
+          </div><!-->
         </div>
-
-        <h3 class="image-text">{{ image.Description }}</h3>
-        <p class="image-caption">{{ image.Filename }}</p>
-        <span class="image-copy">Foto: blablabla</span>
-      </div>
-    </figure>
+      </figure>
+    </div>
     <button class="border" @click="handleBack">Go back</button>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -52,3 +53,14 @@ export default {
   },
 };
 </script>
+
+<style>
+body {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+main {
+  padding: 2rem;
+}
+</style>
