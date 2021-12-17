@@ -69,7 +69,7 @@
           </section> 
 
           <section
-            class="image text-left text-top"
+            class="image text-left text-bottom"
             :class="index % 2 == 0 ? 'reverse' : ''"
             v-if="image.Size === 'small'"
           >
@@ -90,6 +90,7 @@
             </div>
             <div class="flex image-container">
               <div class="image-section">
+                <img class=""
                 <img :src="image.Link" :alt="image.Name" class="image-src"/>
                 <span class="image-copy">{{ image.Copyright }}</span>
               </div>
