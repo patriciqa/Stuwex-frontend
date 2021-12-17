@@ -28,10 +28,13 @@
         </section>
         <section id="welcome-text">
           <p class="welcome-text welcome-text-heading">
-            Grosssiedlungen in Pressebildern
+            Grosssiedlungen im Pressebild
           </p>
           <p class="welcome-text welcome-text-subheading">
             Hoffnungsträger oder Symbol der Wachstumskritik?
+          </p>
+          <p class="welcome-text welcome-text-subheading">
+            Eine Ausstellung vom Stadtmuseum Aarau
           </p>
         </section>
       </div>
