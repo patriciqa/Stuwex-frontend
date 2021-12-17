@@ -218,6 +218,10 @@ figure:nth-child(1) {
   display: block;
 }
 
+figure img {
+  width: 100%;
+}
+
 .back-btn {
   display: flex;
   width: fit-content;
