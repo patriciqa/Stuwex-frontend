@@ -140,9 +140,12 @@ export default {
       });
     },
   },
-  mounted() {
+  /*mounted() {
     let randomX = Math.floor((Math.random() * 3) - 3);
     console.log(randomX);
-  }
+
+    let frame = document.querySelectorAll("img.frame");
+    console.log(frame);
+  }*/
 };
 </script>
