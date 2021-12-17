@@ -45,6 +45,7 @@
           >
             <div class="image-container">
               <div class="image-section">
+                <img src="../assets/img/pen-frame-quadratisch-1.png" alt="Roter Rahmen um das Bild" class="frame"/>
                 <img :src="image.Link" :alt="image.Name" class="image-src" :class="image.Size" />
                 <span class="image-copy">{{ image.Copyright }}</span>
               </div>
@@ -90,6 +91,7 @@
             </div>
             <div class="flex image-container">
               <div class="image-section">
+                <img src="../assets/img/pen-frame-hochformat-1.png" alt="Roter Rahmen um das Bild" class="frame"/>
                 <img :src="image.Link" :alt="image.Name" class="image-src"/>
                 <span class="image-copy">{{ image.Copyright }}</span>
               </div>

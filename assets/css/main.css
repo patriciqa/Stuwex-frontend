@@ -97,7 +97,7 @@ section.image {
   font-weight: 600;
 }
 
-.image-src:hover + .image-copy {
+.image-section:hover .image-copy {
   opacity: 1;
 }
 
@@ -177,12 +177,10 @@ section.image {
   transform: translateY(0.5rem);
 }
 
-/* img.medium::before {
-  content: "";
-  height: 100%;
-  width: 100%;
-  background: url(../img/pen-frame-quadratisch.png);
-} */
+img.frame {
+  height: 100vh;
+  position: absolute;
+}
 
 /* Category */
 .subpage {
