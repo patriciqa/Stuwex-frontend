@@ -69,8 +69,8 @@
           </section> 
 
           <section
-            class="image text-left"
-            :class="index % 2 == 0 ? 'reverse' && 'text-bottom' : ''"
+            class="image text-left text-top"
+            :class="index % 2 == 0 ? 'reverse' : ''"
             v-if="image.Size === 'small'"
           >
             <div class="image-aside">

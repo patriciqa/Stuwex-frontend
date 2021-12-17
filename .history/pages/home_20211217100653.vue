@@ -40,8 +40,8 @@
 
            <section
             v-if="image.Size === 'medium'"
-            class="image text-right"
-            :class="index % 2 == 0 ? 'reverse' && 'text-bottom' : ''"
+            class="image text-right text-bottom"
+            :class="index % 2 == 0 ? 'reverse' : ''"
           >
             <div class="image-container">
               <div class="image-section">
@@ -69,8 +69,8 @@
           </section> 
 
           <section
-            class="image text-left"
-            :class="index % 2 == 0 ? 'reverse' && 'text-bottom' : ''"
+            class="image text-left text-top"
+            :class="index % 2 == 0 ? 'reverse' : ''"
             v-if="image.Size === 'small'"
           >
             <div class="image-aside">
