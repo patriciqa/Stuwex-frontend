@@ -19,21 +19,21 @@
       <ul class="dropdown-content absolute hidden pt-10">
         <li>
           <NuxtLink
-            class="bg-black hover:bg-red-600 py-2 px-4 block"
+            class="text-black bg-white hover:bg-red-500 py-2 px-4 block"
             to="/home"
             >Home</NuxtLink
           >
         </li>
         <li>
           <NuxtLink
-            class="bg-black  hover:bg-red-600 py-2 px-4 block"
+            class="text-black bg-white hover:bg-gray-800 py-2 px-4 block"
             to="/impressum"
             >Impressum</NuxtLink
           >
         </li>
         <li>
           <NuxtLink
-            class="bg-black  hover:bg-red-600 py-2 px-4 block"
+            class="text-black bg-white hover:bg-gray-800 py-2 px-4 block"
             to="/datenschutz"
             >Datenschutz</NuxtLink
           >

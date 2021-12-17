@@ -1,6 +1,7 @@
 <template>
   <main class="subpage">
     <navigation></navigation>
+
     <div class="category">
       <figure
         v-for="(image, index) in images"
@@ -23,6 +24,12 @@
             <p>{{ image.Title }}</p>
             <span>{{ image.Copyright }}</span>
           </figcaption>
+          <!-- <figCaption :id="[`image-title-${image.PhotoId}`]" class="caption">
+            {{ index }}{{ image.PhotoId }}</figCaption
+          >
+          <div :id="[`description-${image.PhotoId}`]" class="description">
+            {{ image.Description }}
+          </div><!-->
         </div>
       </figure>
     </div>

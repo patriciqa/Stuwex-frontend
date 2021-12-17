@@ -26,14 +26,14 @@
         </li>
         <li>
           <NuxtLink
-            class="bg-black  hover:bg-red-600 py-2 px-4 block"
+            class="bg-black  hover:bg-gray-800 py-2 px-4 block"
             to="/impressum"
             >Impressum</NuxtLink
           >
         </li>
         <li>
           <NuxtLink
-            class="bg-black  hover:bg-red-600 py-2 px-4 block"
+            class="bg-black  hover:bg-gray-800 py-2 px-4 block"
             to="/datenschutz"
             >Datenschutz</NuxtLink
           >
