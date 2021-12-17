@@ -19,7 +19,7 @@
             >
               <div class="image-aside">
                 <h3 class="image-text" :class="index % 2 == 0 ? '' : 'black-font'">
-                  {{ image.Filetext }}
+                  <span>{{ image.Filetext }}</span>
                 </h3>
                 <p class="image-caption">{{ image.Title }}</p>
                 <nuxt-link

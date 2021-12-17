@@ -67,10 +67,6 @@ section.image {
   background-color: var(--red);
 }
 
-.black-font {
-  background-color: black;
-  opacity: 0.6;
-}
 
 .reverse {
   flex-direction: row-reverse;
@@ -159,6 +155,13 @@ section.image {
 
 .text-center .image-text::before {
   content: none;
+}
+
+.black-font span {
+  background-color: var(--white);
+  color: var(--black);
+  line-height: 140%;
+  font-size: 2.2rem;
 }
 
 .link {
