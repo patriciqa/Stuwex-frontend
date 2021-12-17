@@ -12,8 +12,8 @@
           v-if="image.Category.endsWith($route.params.Category)"
         >
           <section>
-            <img v-if="image.Size === 'small'" class="frame" src="../assets/img/pen-frame-hochformat-1.png" alt="Roter Rahmen um das Bild">
-            <img v-else class="frame" src="../assets/img/pen-frame-quadratisch-1.png" alt="Roter Rahmen um das Bild">
+           <!-- <img v-if="image.Size === 'small'" class="frame" src="../assets/img/pen-frame-hochformat-1.png" alt="Roter Rahmen um das Bild">
+            <img v-else class="frame" src="../assets/img/pen-frame-quadratisch-1.png" alt="Roter Rahmen um das Bild"> -->
             <img
               :src="image.Link"
               :alt="image.Name"
